@@ -12,10 +12,10 @@ def getRequest():
         return text
 
 
-def parse(bleh):
+def parse(info):
     statusList = ["\033[32mLess Busy", "\033[33mModerately Busy", "\033[31mExtremely Busy"]
     diningHalls = ["251 North", "South Campus", "Yahentamitsi"]
-    split = bleh.split(',')
+    split = info.split(',')
     hallIndex = 0
     for s in split:
         print(diningHalls[hallIndex] + "\t\t" + statusList[int(s[-1])-1] + "\033[37m")
